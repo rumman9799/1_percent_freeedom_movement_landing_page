@@ -4,6 +4,7 @@ interface PainSectionProps {
   t: {
     headline: string;
     bullets: string[];
+    footer: string;
   };
 }
 
@@ -37,7 +38,7 @@ export function PainSection({ t }: PainSectionProps) {
 
           <div className="mt-12 p-8 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl border-l-4 border-red-500">
             <p className="text-gray-800 text-xl font-medium text-center leading-relaxed">
-              Every month, your hard-earned money flows away... building someone else's future, not yours.
+              {t.footer}
             </p>
           </div>
         </div>

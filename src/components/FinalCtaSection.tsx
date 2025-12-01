@@ -2,10 +2,13 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 
 interface FinalCtaSectionProps {
   t: {
+    headline: string;
+    headlineSub: string;
     cta1: string;
     cta2: string;
     subtext: string;
     benefits: string[];
+    footer: string;
   };
   onCtaClick: () => void;
 }
@@ -21,10 +24,10 @@ export function FinalCtaSection({ t, onCtaClick }: FinalCtaSectionProps) {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
-              The Time Is Now
+              {t.headline}
             </h2>
             <p className="text-xl sm:text-2xl opacity-90">
-              Don't let this opportunity slip away
+              {t.headlineSub}
             </p>
           </div>
 
@@ -65,7 +68,7 @@ export function FinalCtaSection({ t, onCtaClick }: FinalCtaSectionProps) {
 
             <div className="bg-gradient-to-r from-amber-500 to-orange-500 p-6 text-center">
               <p className="text-white text-lg font-bold">
-                Register now before all spots are filled
+                {t.footer}
               </p>
             </div>
           </div>

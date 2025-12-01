@@ -1,6 +1,7 @@
 export const translations = {
   bn: {
     hero: {
+      tagline: "১% ল্যান্ড ফ্রিডম মুভমেন্ট",
       headline: "১% দিলেই জমি — এবার ভাড়ার শৃঙ্খল ভাঙার সময়।",
       subheadline: "১% ভূমি স্বাধীনতা আন্দোলন আজীবন ভাড়াটেদের সাহায্য করার জন্য বিদ্যমান যাতে তারা বিশাল অগ্রিম পেমেন্ট ছাড়াই, ব্যাংক ঋণ ছাড়াই এবং দশকের অপেক্ষা ছাড়াই জমির মালিকানায় প্রবেश করতে পারে।",
       cta: "১% অপেক্ষা তালিকায় এখনই যোগ দিন",
@@ -15,7 +16,8 @@ export const translations = {
         "সন্তানরা জমি নিরাপত্তা ছাড়াই বড় হয়",
         "কোনো স্থির সম্পদ ছাড়াই অবসর",
         "প্রতিটি ভাড়ার রসিদ = চিরতরে হারিয়ে যাওয়া অর্থ"
-      ]
+      ],
+      footer: "প্রতি মাসে আপনার কষ্টার্জিত টাকা বয়ে যায়... কারো ভবিষ্যৎ গড়তে, আপনার নয়।"
     },
     hope: {
       headline: "এখন এই ভবিষ্যৎ কল্পনা করুন",
@@ -25,10 +27,12 @@ export const translations = {
         "আপনার সন্তান বলে বড় হয়: 'এই জমি আমাদের।'",
         "আর বাড়িওয়ালাদের খাওয়ানো নয় — শুধু উত্তরাধিকার"
       ],
-      imageQuestion: "যদি একই মাসিক পদক্ষেপে আপনি নীরবে আপনার পরিবারের পরবর্তী ৩০ বছর পুনর্লিখন করতে পারেন?"
+      imageQuestion: "যদি একই মাসিক পদক্ষেপে আপনি নীরবে আপনার পরিবারের পরবর্তী ৩০ বছর পুনর্লিখন করতে পারেন?",
+      footer: "আপনার অর্থ অবশেষে অন্য কারো নয়, কেবল আপনার পরিবারের উত্তরাধিকার তৈরি করা শুরু করে।"
     },
     value: {
       headline: "এটি একটি প্লট বিক্রয় নয় — এটি একটি স্বাধীনতা ব্যবস্থা",
+      subtext: "এই আন্দোলন তিনটি মূল স্তম্ভের উপর দাঁড়িয়ে আছে, যা জীবনের গতিপথ পাল্টে দেয়।",
       pillar1: {
         title: "মনস্তাত্ত্বিক স্বাধীনতা",
         description: "আপনি ভাড়াটে পরিচয় থেকে বেরিয়ে মালিক পরিচয়ে প্রবেশ করেন।"
@@ -50,7 +54,10 @@ export const translations = {
         "১০০+ সফল লাভজনক জমি বিনিয়োগ পরিচালিত",
         "জমি রূপান্তর, আইনি যাচাই এবং লাভ জোনিংয়ে গভীর ক্ষেত্র-স্তরের অভিজ্ঞতা"
       ],
-      statement: "১৬ বছর ধরে আমি দেখেছি কীভাবে সাধারণ মানুষ ভাড়ার চক্রে আটকে যায়। এই আন্দোলন সেই চক্র ভাঙার জন্য — যাতে প্রতিটি পরিবার তাদের নিজের জমিতে দাঁড়াতে পারে।"
+      statement: "১৬ বছর ধরে আমি দেখেছি কীভাবে সাধারণ মানুষ ভাড়ার চক্রে আটকে যায়। এই আন্দোলন সেই চক্র ভাঙার জন্য — যাতে প্রতিটি পরিবার তাদের নিজের জমিতে দাঁড়াতে পারে।",
+      founderLabel: "প্রতিষ্ঠাতার বার্তা",
+      founderTitle: "আন্দোলনের প্রতিষ্ঠাতা",
+      founderExperience: "১৬ বছরের ক্ষেত্র অভিজ্ঞতা"
     },
     gift: {
       headline: "🎁 প্রতিটি নিবন্ধিত অপেক্ষা তালিকার সদস্য একটি বিনামূল্যে বিনিয়োগ স্বাস্থ্য পরীক্ষা পায়",
@@ -61,7 +68,11 @@ export const translations = {
         "আপনার ঝুঁকি এক্সপোজার নির্ণয়",
         "আপনার লাভ-জোন যোগ্যতা",
         "আপনার ভুল-প্রতিরোধ চেকলিস্ট"
-      ]
+      ],
+      whatYouGetTitle: "আপনি যা পাচ্ছেন:",
+      exclusiveNote: "এই বিশেষ উপহারটি শুধুমাত্র অপেক্ষা তালিকার সদস্যদের জন্য।",
+      videoAlt: "বিনিয়োগ স্বাস্থ্য পরীক্ষা ভিডিও",
+      videoTitle: "দেখুন: বিনিয়োগ স্বাস্থ্য পরীক্ষা কীভাবে কাজ করে"
     },
     howItWorks: {
       headline: "১% অপেক্ষা তালিকা ব্যবস্থা কীভাবে কাজ করে",
@@ -83,7 +94,8 @@ export const translations = {
           description: "জমি স্বাধীনতায় প্রবেশাধিকার পান"
         }
       ],
-      subtitle: "কোনো ব্যাংক ঋণ নেই | কোনো তাত্ক্ষণিক মিলিয়ন নেই | শুধুমাত্র সিস্টেমাইজড মালিকানা"
+      subtitle: "কোনো ব্যাংক ঋণ নেই | কোনো তাত্ক্ষণিক মিলিয়ন নেই | শুধুমাত্র সিস্টেমাইজড মালিকানা",
+      badges: ["কোনো ব্যাংক ঋণ নেই", "কোনো তাৎক্ষণিক মিলিয়ন নেই", "শুধু সিস্টেমাইজড মালিকানা"]
     },
     scarcity: {
       headline: "এটি চিরতরে খোলা নয়। ভূমি স্বাধীনতার একটি গেট আছে।",
@@ -91,15 +103,24 @@ export const translations = {
         "পরবর্তী ৩ মাসে শুধুমাত্র ৫০ জন প্রার্থী নির্বাচন করা হবে",
         "যখন ৫০০ জন নাম অপেক্ষা তালিকায় প্রবেश করবে — চিরতরে আর কোনো নিবন্ধন হবে না"
       ],
-      counter: "অপেক্ষা তালিকা পূরণ"
+      counter: "অপেক্ষা তালিকা পূরণ",
+      filledLabel: "পূর্ণ হয়েছে",
+      spotsRemainingSuffix: "টি স্থান বাকি",
+      selectedInMonths: "৩ মাসে নির্বাচিত",
+      maxRegistrations: "সর্বোচ্চ নিবন্ধন",
+      spotsLeftCard: "খালি স্থান",
+      footer: "একবার গেট বন্ধ হয়ে গেলে, তা চিরতরে বন্ধ।"
     },
     finalClose: {
       line1: "আপনার বাবা ভাড়া দিয়েছেন।",
       line2: "আপনি ভাড়া দিচ্ছেন।",
       line3: "যদি কিছু পরিবর্তন না হয় —",
-      line4: "আপনার সন্তানরাও করবে।"
+      line4: "আপনার সন্তানরাও করবে।",
+      tagline: "চক্র ভাঙার সময় আজই।"
     },
     finalCta: {
+      headline: "সময় এখনই",
+      headlineSub: "এই সুযোগটি হাতছাড়া হতে দেবেন না",
       cta1: "১% অপেক্ষা তালিকায় এখনই যোগ দিন",
       cta2: "আমার ভাড়া চক্র চিরতরে ভাঙুন",
       subtext: "নিবন্ধন বাধ্যতামূলক পেতে:",
@@ -108,14 +129,19 @@ export const translations = {
         "বিনামূল্যে স্বাস্থ্য পরীক্ষা",
         "১% বরাদ্দ অগ্রাধিকার",
         "আজীবন ভূমি স্বাধীনতা যোগ্যতা"
-      ]
+      ],
+      footer: "সব স্লট ভর্তি হওয়ার আগে এখনই নিবন্ধন করুন।"
     },
     language: {
       toggle: "English"
+    },
+    branding: {
+      alt: "১% ফ্রিডম মুভমেন্ট লোগো"
     }
   },
   en: {
     hero: {
+      tagline: "1% Land Freedom Movement",
       headline: "1% is All It Takes — Time to Break the Rent Chain.",
       subheadline: "The 1% Land Freedom Movement exists to help lifelong renters break into land ownership without massive down-payments, without bank loans, and without decades of waiting.",
       cta: "Join the 1% Waiting List Now",
@@ -130,7 +156,8 @@ export const translations = {
         "Children grow without land security",
         "Retirement with no fixed assets",
         "Every rent receipt = money lost forever"
-      ]
+      ],
+      footer: "Every month, your hard-earned money flows away... building someone else's future, not yours."
     },
     hope: {
       headline: "Now Imagine This Future Instead",
@@ -140,10 +167,12 @@ export const translations = {
         "Your child grows up saying: 'This land is ours.'",
         "No more feeding landlords — only legacy"
       ],
-      imageQuestion: "What if, with the same monthly step, you could quietly rewrite your family's next 30 years?"
+      imageQuestion: "What if, with the same monthly step, you could quietly rewrite your family's next 30 years?",
+      footer: "Your money finally starts building YOUR legacy, not someone else's wealth."
     },
     value: {
       headline: "This Is Not a Plot Sale — This Is a Freedom System",
+      subtext: "This movement is built on three foundational pillars that transform lives.",
       pillar1: {
         title: "Psychological Freedom",
         description: "You exit renter identity and enter owner identity."
@@ -165,7 +194,10 @@ export const translations = {
         "100+ successful profitable land investments guided",
         "Deep field-level experience in land conversion, legal vetting & profit zoning"
       ],
-      statement: "For 16 years, I've witnessed how ordinary people get trapped in the rent cycle. This movement exists to break that cycle — so every family can stand on their own land."
+      statement: "For 16 years, I've witnessed how ordinary people get trapped in the rent cycle. This movement exists to break that cycle — so every family can stand on their own land.",
+      founderLabel: "FOUNDER MESSAGE",
+      founderTitle: "Movement Founder",
+      founderExperience: "16 Years Field Experience"
     },
     gift: {
       headline: "🎁 Every Registered Waiting List Member Gets a FREE Investment Health Check",
@@ -176,7 +208,11 @@ export const translations = {
         "Your risk exposure diagnosis",
         "Your profit-zone eligibility",
         "Your mistake-prevention checklist"
-      ]
+      ],
+      whatYouGetTitle: "What You Get:",
+      exclusiveNote: "This exclusive gift is ONLY available to waiting list members.",
+      videoAlt: "Investment Health Check Video",
+      videoTitle: "Watch: How the Investment Health Check Works"
     },
     howItWorks: {
       headline: "How the 1% Waiting List System Works",
@@ -198,7 +234,8 @@ export const translations = {
           description: "Gain access to land freedom"
         }
       ],
-      subtitle: "No bank loans | No instant millions | Only systemized ownership"
+      subtitle: "No bank loans | No instant millions | Only systemized ownership",
+      badges: ["No bank loans", "No instant millions", "Only systemized ownership"]
     },
     scarcity: {
       headline: "This Is Not Open Forever. Land Freedom Has a Gate.",
@@ -206,15 +243,24 @@ export const translations = {
         "Only 50 candidates will be selected in the next 3 months",
         "Once 500 names enter the waiting list — NO MORE REGISTRATION FOREVER"
       ],
-      counter: "Waiting List Filled"
+      counter: "Waiting List Filled",
+      filledLabel: "Filled",
+      spotsRemainingSuffix: "spots remaining",
+      selectedInMonths: "Selected in 3 Months",
+      maxRegistrations: "Maximum Registrations",
+      spotsLeftCard: "Spots Left",
+      footer: "Once the gate closes, it closes forever."
     },
     finalClose: {
       line1: "Your father paid rent.",
       line2: "You are paying rent.",
       line3: "If nothing changes —",
-      line4: "your children will too."
+      line4: "your children will too.",
+      tagline: "Break the cycle. Today."
     },
     finalCta: {
+      headline: "The Time Is Now",
+      headlineSub: "Don't let this opportunity slip away",
       cta1: "Join the 1% Waiting List Now",
       cta2: "Break My Renting Cycle Forever",
       subtext: "Registration is mandatory to receive:",
@@ -223,10 +269,14 @@ export const translations = {
         "Free Health Check",
         "1% Allocation Priority",
         "Lifetime Land Freedom Eligibility"
-      ]
+      ],
+      footer: "Register now before all spots are filled"
     },
     language: {
       toggle: "বাংলা"
+    },
+    branding: {
+      alt: "1% Freedom Movement Logo"
     }
   }
 };

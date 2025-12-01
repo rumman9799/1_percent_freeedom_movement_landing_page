@@ -6,6 +6,12 @@ interface ScarcitySectionProps {
     headline: string;
     rules: string[];
     counter: string;
+    filledLabel: string;
+    spotsRemainingSuffix: string;
+    selectedInMonths: string;
+    maxRegistrations: string;
+    spotsLeftCard: string;
+    footer: string;
   };
 }
 
@@ -69,20 +75,20 @@ export function ScarcitySection({ t }: ScarcitySectionProps) {
                   ></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-sm font-bold text-gray-800">
-                      {percentage.toFixed(1)}% Filled
+                      {percentage.toFixed(1)}% {t.filledLabel}
                     </span>
                   </div>
                 </div>
 
                 <p className="text-center text-gray-600 text-sm">
-                  Only {500 - count} spots remaining
+                  {500 - count} {t.spotsRemainingSuffix}
                 </p>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-red-500 to-orange-500 p-6 text-center">
               <p className="text-white text-xl font-bold">
-                Once the gate closes, it closes forever.
+                {t.footer}
               </p>
             </div>
           </div>
@@ -90,15 +96,15 @@ export function ScarcitySection({ t }: ScarcitySectionProps) {
           <div className="grid md:grid-cols-3 gap-4 text-center">
             <div className="p-6 bg-white rounded-xl shadow-lg">
               <div className="text-4xl font-bold text-[#267C41] mb-2">50</div>
-              <div className="text-gray-600">Selected in 3 Months</div>
+              <div className="text-gray-600">{t.selectedInMonths}</div>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-lg">
               <div className="text-4xl font-bold text-[#267C41] mb-2">500</div>
-              <div className="text-gray-600">Maximum Registrations</div>
+              <div className="text-gray-600">{t.maxRegistrations}</div>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-lg">
               <div className="text-4xl font-bold text-red-500 mb-2">{500 - count}</div>
-              <div className="text-gray-600">Spots Left</div>
+              <div className="text-gray-600">{t.spotsLeftCard}</div>
             </div>
           </div>
         </div>

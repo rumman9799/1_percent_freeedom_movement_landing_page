@@ -4,6 +4,7 @@ interface FinalCloseSectionProps {
     line2: string;
     line3: string;
     line4: string;
+    tagline: string;
   };
 }
 
@@ -36,7 +37,7 @@ export function FinalCloseSection({ t }: FinalCloseSectionProps) {
             <div className="inline-block p-1 bg-gradient-to-r from-[#55A7AF] to-[#267C41] rounded-2xl">
               <div className="bg-gray-900 px-8 py-4 rounded-xl">
                 <p className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#55A7AF] to-[#267C41]">
-                  Break the cycle. Today.
+                  {t.tagline}
                 </p>
               </div>
             </div>

@@ -6,6 +6,7 @@ import introVideo from '../assets/intro.mp4';
 
 interface HeroSectionProps {
   t: {
+    tagline: string;
     headline: string;
     subheadline: string;
     cta: string;
@@ -28,7 +29,7 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
           <div className="space-y-8 text-center lg:text-left">
             <div className="inline-block px-4 py-2 bg-[#55A7AF]/10 rounded-full">
               <span className="text-[#267C41] font-semibold text-sm tracking-wide">
-                1% LAND FREEDOM MOVEMENT
+                {t.tagline}
               </span>
             </div>
 

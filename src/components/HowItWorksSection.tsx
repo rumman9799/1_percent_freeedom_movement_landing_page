@@ -5,6 +5,7 @@ interface HowItWorksSectionProps {
     headline: string;
     steps: Array<{ title: string; description: string }>;
     subtitle: string;
+    badges: string[];
   };
 }
 
@@ -64,20 +65,15 @@ export function HowItWorksSection({ t }: HowItWorksSectionProps) {
 
           <div className="mt-16 p-8 bg-gradient-to-r from-gray-50 to-white rounded-2xl border-2 border-[#55A7AF]/30 shadow-lg">
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                <span className="text-gray-800 font-semibold">No bank loans</span>
-              </div>
-              <div className="hidden md:block w-px h-8 bg-gray-300"></div>
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                <span className="text-gray-800 font-semibold">No instant millions</span>
-              </div>
-              <div className="hidden md:block w-px h-8 bg-gray-300"></div>
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-[#267C41] rounded-full"></div>
-                <span className="text-gray-800 font-semibold">Only systemized ownership</span>
-              </div>
+              {t.badges.map((badge, index) => (
+                <>
+                  {index > 0 && <div className="hidden md:block w-px h-8 bg-gray-300"></div>}
+                  <div key={index} className="flex items-center gap-3">
+                    <div className={`w-3 h-3 rounded-full ${index === 2 ? 'bg-[#267C41]' : 'bg-red-500'}`}></div>
+                    <span className="text-gray-800 font-semibold">{badge}</span>
+                  </div>
+                </>
+              ))}
             </div>
           </div>
         </div>

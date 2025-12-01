@@ -5,6 +5,10 @@ interface GiftSectionProps {
     headline: string;
     description: string;
     benefits: string[];
+    whatYouGetTitle: string;
+    exclusiveNote: string;
+    videoAlt: string;
+    videoTitle: string;
   };
 }
 
@@ -31,7 +35,7 @@ export function GiftSection({ t }: GiftSectionProps) {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-gray-900">What You Get:</h3>
+                <h3 className="text-2xl font-bold text-gray-900">{t.whatYouGetTitle}</h3>
                 {t.benefits.map((benefit, index) => (
                   <div
                     key={index}
@@ -45,7 +49,7 @@ export function GiftSection({ t }: GiftSectionProps) {
 
               <div className="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border-l-4 border-amber-500">
                 <p className="text-gray-800 font-semibold text-lg">
-                  This exclusive gift is ONLY available to waiting list members.
+                  {t.exclusiveNote}
                 </p>
               </div>
             </div>
@@ -54,7 +58,7 @@ export function GiftSection({ t }: GiftSectionProps) {
               <div className="aspect-video bg-gray-900 rounded-2xl shadow-2xl overflow-hidden relative group">
                 <img
                   src="https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  alt="Investment Health Check Video"
+                  alt={t.videoAlt}
                   className="w-full h-full object-cover opacity-70"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -64,7 +68,7 @@ export function GiftSection({ t }: GiftSectionProps) {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                   <p className="text-white text-lg font-medium">
-                    Watch: How the Investment Health Check Works
+                    {t.videoTitle}
                   </p>
                 </div>
               </div>

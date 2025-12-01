@@ -9,6 +9,9 @@ interface CredibilitySectionProps {
     headline: string;
     bullets: string[];
     statement: string;
+    founderLabel: string;
+    founderTitle: string;
+    founderExperience: string;
   };
 }
 
@@ -56,7 +59,7 @@ export function CredibilitySection({ t }: CredibilitySectionProps) {
                 <div className="flex items-center gap-2">
                   <div className="h-1 w-12 bg-gradient-to-r from-[#55A7AF] to-[#267C41] rounded"></div>
                   <span className="text-[#267C41] font-semibold text-sm tracking-wider">
-                    FOUNDER MESSAGE
+                    {t.founderLabel}
                   </span>
                 </div>
 
@@ -65,8 +68,8 @@ export function CredibilitySection({ t }: CredibilitySectionProps) {
                 </p>
 
                 <div className="pt-4">
-                  <p className="text-gray-600 font-medium">Movement Founder</p>
-                  <p className="text-sm text-gray-500">16 Years Field Experience</p>
+                  <p className="text-gray-600 font-medium">{t.founderTitle}</p>
+                  <p className="text-sm text-gray-500">{t.founderExperience}</p>
                 </div>
               </div>
             </div>

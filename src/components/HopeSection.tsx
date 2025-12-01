@@ -5,6 +5,7 @@ interface HopeSectionProps {
     headline: string;
     bullets: string[];
     imageQuestion: string;
+    footer: string;
   };
 }
 
@@ -58,7 +59,7 @@ export function HopeSection({ t }: HopeSectionProps) {
 
             <div className="p-8 bg-gradient-to-r from-[#55A7AF] to-[#267C41] rounded-2xl">
               <p className="text-white text-xl font-medium text-center leading-relaxed">
-                Your money finally starts building YOUR legacy, not someone else's wealth.
+                {t.footer}
               </p>
             </div>
           </div>

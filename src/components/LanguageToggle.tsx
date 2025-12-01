@@ -2,10 +2,11 @@ import { Globe } from 'lucide-react';
 
 interface LanguageToggleProps {
   currentLanguage: 'bn' | 'en';
+  label: string;
   onToggle: () => void;
 }
 
-export function LanguageToggle({ currentLanguage, onToggle }: LanguageToggleProps) {
+export function LanguageToggle({ label, onToggle }: LanguageToggleProps) {
   return (
     <button
       onClick={onToggle}
@@ -14,7 +15,7 @@ export function LanguageToggle({ currentLanguage, onToggle }: LanguageToggleProp
     >
       <Globe className="w-5 h-5 text-[#55A7AF]" />
       <span className="font-medium text-gray-800">
-        {currentLanguage === 'bn' ? 'English' : 'বাংলা'}
+        {label}
       </span>
     </button>
   );

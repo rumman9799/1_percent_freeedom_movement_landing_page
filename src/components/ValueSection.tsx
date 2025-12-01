@@ -3,6 +3,7 @@ import { Brain, Wallet, Shield } from 'lucide-react';
 interface ValueSectionProps {
   t: {
     headline: string;
+    subtext: string;
     pillar1: { title: string; description: string };
     pillar2: { title: string; description: string };
     pillar3: { title: string; description: string };
@@ -40,7 +41,7 @@ export function ValueSection({ t }: ValueSectionProps) {
 
         <div className="max-w-3xl mx-auto mb-16">
           <p className="text-lg text-gray-600 text-center leading-relaxed">
-            This movement is built on three foundational pillars that transform lives
+            {t.subtext}
           </p>
         </div>
 

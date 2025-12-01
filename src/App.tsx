@@ -39,13 +39,13 @@ function App() {
       <div className="absolute top-4 left-4 sm:top-5 sm:left-6 lg:top-6 lg:left-8 z-20">
         <img
           src={logo}
-          alt="1% Freedom Movement"
+          alt={t.branding.alt}
           className="h-12 sm:h-14 w-auto"
         />
       </div>
 
       <LanguageToggle
-        currentLanguage={language}
+        label={t.language.toggle}
         onToggle={() => setLanguage(language === 'bn' ? 'en' : 'bn')}
       />
 
