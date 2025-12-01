@@ -1,5 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 
+// TODO: Ensure this path/filename matches your actual video file in assets
+// Example: place intor.mp4 in src/assets and keep the import below
+import introVideo from '../assets/intro.mp4';
+
 interface HeroSectionProps {
   t: {
     headline: string;
@@ -49,17 +53,20 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
 
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.pexels.com/photos/3760607/pexels-photo-3760607.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Father contemplating rent burden"
+              <video
+                src={introVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+              {/* <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                 <p className="text-white text-lg sm:text-xl font-medium leading-relaxed italic">
                   "{t.imageQuestion}"
                 </p>
-              </div>
+              </div> */}
             </div>
 
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#55A7AF] rounded-full opacity-20 blur-xl"></div>

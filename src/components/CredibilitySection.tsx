@@ -1,5 +1,9 @@
 import { Award, Users, TrendingUp, CheckCircle } from 'lucide-react';
 
+// TODO: Update this path/filename to match your actual founder image
+// Example: place founder.jpg in src/assets and use '../assets/founder.jpg'
+import founderImage from '../assets/founder.png';
+
 interface CredibilitySectionProps {
   t: {
     headline: string;
@@ -39,12 +43,12 @@ export function CredibilitySection({ t }: CredibilitySectionProps) {
           <div className="bg-gradient-to-br from-gray-50 to-white p-8 sm:p-12 rounded-2xl shadow-xl border border-gray-200">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-shrink-0">
-                <div className="w-32 h-32 bg-gradient-to-br from-[#55A7AF] to-[#267C41] rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-                  <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#55A7AF] to-[#267C41]">
-                      FM
-                    </span>
-                  </div>
+                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#55A7AF] to-[#267C41] p-1 shadow-lg">
+                  <img
+                    src={founderImage}
+                    alt="Founder"
+                    className="w-full h-full rounded-full object-cover border-2 border-white"
+                  />
                 </div>
               </div>
 

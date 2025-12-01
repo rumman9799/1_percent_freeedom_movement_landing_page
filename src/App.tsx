@@ -13,16 +13,37 @@ import { FinalCloseSection } from './components/FinalCloseSection';
 import { FinalCtaSection } from './components/FinalCtaSection';
 import { StickyCtaButton } from './components/StickyCtaButton';
 
+// TODO: Update this path/filename to match your actual logo file
+// Example: place logo.png in src/assets and use './assets/logo.png'
+import logo from './assets/logo.png';
+
 function App() {
   const [language, setLanguage] = useState<'bn' | 'en'>('bn');
   const t = translations[language];
 
+  const navigateTo = (url: string) => {
+    if (typeof window !== 'undefined') {
+      window.location.href = url;
+    }
+  };
+
+  const ctaUrl = 'https://www.southeastlandmark.com/lead/';
+
   const handleCtaClick = () => {
-    alert('Form will be integrated here. This is where your waiting list registration form will appear.');
+    navigateTo(ctaUrl);
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      {/* Top-left logo (scrolls with page) */}
+      <div className="absolute top-4 left-4 sm:top-5 sm:left-6 lg:top-6 lg:left-8 z-20">
+        <img
+          src={logo}
+          alt="1% Freedom Movement"
+          className="h-12 sm:h-14 w-auto"
+        />
+      </div>
+
       <LanguageToggle
         currentLanguage={language}
         onToggle={() => setLanguage(language === 'bn' ? 'en' : 'bn')}
