@@ -35,18 +35,23 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white relative">
-      {/* Top-left logo (scrolls with page) */}
-      <div className="absolute top-4 left-4 sm:top-5 sm:left-6 lg:top-6 lg:left-8 z-20">
-        <img
-          src={logo}
-          alt={t.branding.alt}
-          className="h-18 sm:h-20 w-auto"
-        />
-      </div>
-
-      <LanguageToggle
-        label={t.language.toggle}
-        onToggle={() => setLanguage(language === 'bn' ? 'en' : 'bn')} currentLanguage={'bn'}      />
+      {/* Top bar with logo and language toggle, aligned to page padding and scrolling with content */}
+      <header className="w-full">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <img
+            src={logo}
+            alt={t.branding.alt}
+            className="h-18 sm:h-20 w-auto"
+          />
+          <LanguageToggle
+            label={t.language.toggle}
+            onToggle={() =>
+              setLanguage(language === 'bn' ? 'en' : 'bn')
+            }
+            currentLanguage={language}
+          />
+        </div>
+      </header>
 
       <HeroSection t={t.hero} onCtaClick={handleCtaClick} />
       <PainSection t={t.pain} />

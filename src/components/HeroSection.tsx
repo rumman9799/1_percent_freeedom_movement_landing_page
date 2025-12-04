@@ -18,13 +18,13 @@ interface HeroSectionProps {
 
 export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+    <section className="relative min-h-screen flex items-top bg-gradient-to-br from-gray-50 to-white overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#55A7AF] rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#267C41] rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8 text-center lg:text-left">
             <div className="inline-block px-4 py-2 bg-[#55A7AF]/10 rounded-full">
