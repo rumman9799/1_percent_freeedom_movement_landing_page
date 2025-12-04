@@ -50,7 +50,7 @@ export function ValueSection({ t }: ValueSectionProps) {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
           {pillars.map((pillar, index) => {
-            const Icon = pillar.icon;
+            // const Icon = pillar.icon;
             return (
               <div
                 key={index}
@@ -62,12 +62,12 @@ export function ValueSection({ t }: ValueSectionProps) {
                     alt={pillar.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${pillar.color} opacity-60`}></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  {/* <div className={`absolute inset-0 bg-gradient-to-t ${pillar.color} opacity-60`}></div> */}
+                  {/* <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl">
                       <Icon className="w-10 h-10 text-[#267C41]" />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="p-8 flex-1">

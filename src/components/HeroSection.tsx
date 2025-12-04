@@ -62,7 +62,7 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
                 playsInline
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div> */}
               {/* <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                 <p className="text-white text-lg sm:text-xl font-medium leading-relaxed italic">
                   "{t.imageQuestion}"

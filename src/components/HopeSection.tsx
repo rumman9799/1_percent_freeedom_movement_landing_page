@@ -24,7 +24,7 @@ export function HopeSection({ t }: HopeSectionProps) {
                 alt="Father with hope and peace"
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#267C41]/70 via-transparent to-transparent"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-[#267C41]/70 via-transparent to-transparent"></div> */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                 <p className="text-white text-lg sm:text-xl font-medium leading-relaxed italic">
                   "{t.imageQuestion}"

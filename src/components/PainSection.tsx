@@ -27,7 +27,7 @@ export function PainSection({ t }: PainSectionProps) {
                 playsInline
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div> */}
             </div>
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-red-400 rounded-full opacity-20 blur-xl"></div>
             <div className="absolute -bottom-4 -left-4 w-28 h-28 bg-orange-400 rounded-full opacity-20 blur-xl"></div>
