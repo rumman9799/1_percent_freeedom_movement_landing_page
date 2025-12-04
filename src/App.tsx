@@ -41,7 +41,8 @@ function App() {
           <img
             src={logo}
             alt={t.branding.alt}
-            className="h-18 sm:h-20 w-auto"
+            className="h-18 sm:h-20 w-auto cursor-pointer"
+            onClick={() => navigateTo('https://www.southeastlandmark.com/')}
           />
           <LanguageToggle
             label={t.language.toggle}
