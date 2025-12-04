@@ -1,4 +1,7 @@
 import { Brain, Wallet, Shield } from 'lucide-react';
+import pillarImage1 from '../assets/v1.png';
+import pillarImage2 from '../assets/v2.png';
+import pillarImage3 from '../assets/v3.png';
 
 interface ValueSectionProps {
   t: {
@@ -15,19 +18,19 @@ export function ValueSection({ t }: ValueSectionProps) {
     {
       ...t.pillar1,
       icon: Brain,
-      image: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: pillarImage1,
       color: 'from-purple-500 to-blue-500'
     },
     {
       ...t.pillar2,
       icon: Wallet,
-      image: 'https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: pillarImage2,
       color: 'from-[#55A7AF] to-[#267C41]'
     },
     {
       ...t.pillar3,
       icon: Shield,
-      image: 'https://images.pexels.com/photos/1146603/pexels-photo-1146603.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: pillarImage3,
       color: 'from-[#267C41] to-green-700'
     }
   ];
@@ -45,13 +48,13 @@ export function ValueSection({ t }: ValueSectionProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
               <div
                 key={index}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -67,7 +70,7 @@ export function ValueSection({ t }: ValueSectionProps) {
                   </div>
                 </div>
 
-                <div className="p-8">
+                <div className="p-8 flex-1">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{pillar.title}</h3>
                   <p className="text-gray-700 text-lg leading-relaxed">{pillar.description}</p>
                 </div>

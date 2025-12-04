@@ -1,4 +1,5 @@
 import { Sparkles, TrendingUp, Home, Heart } from 'lucide-react';
+import hopeImage from '../assets/hope.png';
 
 interface HopeSectionProps {
   t: {
@@ -16,10 +17,10 @@ export function HopeSection({ t }: HopeSectionProps) {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="order-2 lg:order-1 relative">
+          <div className="order-2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={hopeImage}
                 alt="Father with hope and peace"
                 className="w-full h-auto object-cover"
               />
@@ -35,7 +36,7 @@ export function HopeSection({ t }: HopeSectionProps) {
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#55A7AF] rounded-full opacity-20 blur-xl"></div>
           </div>
 
-          <div className="order-1 lg:order-2 space-y-8">
+          <div className="order-1 space-y-8">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
               {t.headline}
             </h2>
