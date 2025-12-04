@@ -46,8 +46,7 @@ function App() {
 
       <LanguageToggle
         label={t.language.toggle}
-        onToggle={() => setLanguage(language === 'bn' ? 'en' : 'bn')}
-      />
+        onToggle={() => setLanguage(language === 'bn' ? 'en' : 'bn')} currentLanguage={'bn'}      />
 
       <HeroSection t={t.hero} onCtaClick={handleCtaClick} />
       <PainSection t={t.pain} />
