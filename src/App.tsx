@@ -13,6 +13,7 @@ import { FinalCloseSection } from './components/FinalCloseSection';
 import { FinalCtaSection } from './components/FinalCtaSection';
 import { StickyCtaButton } from './components/StickyCtaButton';
 import { WelcomeModal } from './components/WelcomeModal';
+import { triggerFirstVideo } from './components/SmartVideo';
 
 // TODO: Update this path/filename to match your actual logo file
 // Example: place logo.png in src/assets and use './assets/logo.png'
@@ -45,7 +46,13 @@ function App() {
       {/* Welcome Modal */}
       <WelcomeModal
         isOpen={showWelcomeModal}
-        onClose={() => setShowWelcomeModal(false)}
+        onClose={() => {
+          setShowWelcomeModal(false);
+          // Trigger first video to play when modal closes
+          setTimeout(() => {
+            triggerFirstVideo();
+          }, 300); // Small delay to ensure modal is fully closed
+        }}
       />
 
       {/* Top bar with logo and language toggle, aligned to page padding and scrolling with content */}
