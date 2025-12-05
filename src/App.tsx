@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { translations } from './translations';
 import { LanguageToggle } from './components/LanguageToggle';
 import { HeroSection } from './components/HeroSection';
@@ -12,6 +12,7 @@ import { ScarcitySection } from './components/ScarcitySection';
 import { FinalCloseSection } from './components/FinalCloseSection';
 import { FinalCtaSection } from './components/FinalCtaSection';
 import { StickyCtaButton } from './components/StickyCtaButton';
+import { WelcomeModal } from './components/WelcomeModal';
 
 // TODO: Update this path/filename to match your actual logo file
 // Example: place logo.png in src/assets and use './assets/logo.png'
@@ -19,7 +20,13 @@ import logo from './assets/logo.png';
 
 function App() {
   const [language, setLanguage] = useState<'bn' | 'en'>('bn');
+  const [showWelcomeModal, setShowWelcomeModal] = useState(false);
   const t = translations[language];
+
+  useEffect(() => {
+    // Show modal on page load/reload
+    setShowWelcomeModal(true);
+  }, []);
 
   const navigateTo = (url: string) => {
     if (typeof window !== 'undefined') {
@@ -35,6 +42,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white relative">
+      {/* Welcome Modal */}
+      <WelcomeModal
+        isOpen={showWelcomeModal}
+        onClose={() => setShowWelcomeModal(false)}
+      />
+
       {/* Top bar with logo and language toggle, aligned to page padding and scrolling with content */}
       <header className="w-full">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
