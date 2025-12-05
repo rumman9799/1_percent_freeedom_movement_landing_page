@@ -22,7 +22,6 @@ export function PainSection({ t }: PainSectionProps) {
               <video
                 src={introVideo}
                 autoPlay
-                muted
                 loop
                 playsInline
                 className="w-full h-auto object-cover"

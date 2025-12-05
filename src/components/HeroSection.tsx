@@ -57,7 +57,6 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
               <video
                 src={introVideo}
                 autoPlay
-                muted
                 loop
                 playsInline
                 className="w-full h-auto object-cover"
