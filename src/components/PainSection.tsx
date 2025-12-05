@@ -1,4 +1,5 @@
 import { Clock, TrendingUp, Users, Briefcase, FileText } from 'lucide-react';
+import { SmartVideo } from './SmartVideo';
 import introVideo from '../assets/vid2.mp4';
 
 interface PainSectionProps {
@@ -18,16 +19,10 @@ export function PainSection({ t }: PainSectionProps) {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Video */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <video
-                src={introVideo}
-                autoPlay
-                loop
-                playsInline
-                className="w-full h-auto object-cover"
-              />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div> */}
-            </div>
+            <SmartVideo
+              src={introVideo}
+              frameClassName="rounded-2xl overflow-hidden shadow-2xl"
+            />
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-red-400 rounded-full opacity-20 blur-xl"></div>
             <div className="absolute -bottom-4 -left-4 w-28 h-28 bg-orange-400 rounded-full opacity-20 blur-xl"></div>
           </div>

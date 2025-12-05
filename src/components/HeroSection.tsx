@@ -1,7 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-
-// TODO: Ensure this path/filename matches your actual video file in assets
-// Example: place intor.mp4 in src/assets and keep the import below
+import { SmartVideo } from './SmartVideo';
 import introVideo from '../assets/intro.mp4';
 
 interface HeroSectionProps {
@@ -53,21 +51,10 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
           </div>
 
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <video
-                src={introVideo}
-                autoPlay
-                loop
-                playsInline
-                className="w-full h-auto object-cover"
-              />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div> */}
-              {/* <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <p className="text-white text-lg sm:text-xl font-medium leading-relaxed italic">
-                  "{t.imageQuestion}"
-                </p>
-              </div> */}
-            </div>
+            <SmartVideo
+              src={introVideo}
+              frameClassName="rounded-2xl overflow-hidden shadow-2xl"
+            />
 
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#55A7AF] rounded-full opacity-20 blur-xl"></div>
             <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#267C41] rounded-full opacity-20 blur-xl"></div>
