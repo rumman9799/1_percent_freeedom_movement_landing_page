@@ -1,4 +1,6 @@
-import { Gift, CheckCircle, Play } from 'lucide-react';
+import { Gift, CheckCircle } from 'lucide-react';
+import { SmartVideo } from './SmartVideo';
+import giftVideo from '../assets/gm-speech.mp4';
 
 interface GiftSectionProps {
   t: {
@@ -55,23 +57,12 @@ export function GiftSection({ t }: GiftSectionProps) {
             </div>
 
             <div className="relative">
-              <div className="aspect-video bg-gray-900 rounded-2xl shadow-2xl overflow-hidden relative group">
-                <img
-                  src="https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  alt={t.videoAlt}
-                  className="w-full h-full object-cover opacity-70"
-                />
-                {/* <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl cursor-pointer transform group-hover:scale-110 transition-transform">
-                    <Play className="w-10 h-10 text-[#267C41] ml-1" />
-                  </div>
-                </div> */}
-                {/* <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                  <p className="text-white text-lg font-medium">
-                    {t.videoTitle}
-                  </p>
-                </div> */}
-              </div>
+              <SmartVideo
+                src={giftVideo}
+                frameClassName="rounded-2xl overflow-hidden shadow-2xl"
+                autoPlay={true}
+                loop={true}
+              />
 
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#55A7AF] rounded-full opacity-20 blur-xl"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#267C41] rounded-full opacity-20 blur-xl"></div>
