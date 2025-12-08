@@ -80,9 +80,11 @@ function App() {
       <ValueSection t={t.value} />
       <CredibilitySection t={t.credibility} />
       <GiftSection t={t.gift} />
-      <HowItWorksSection t={t.howItWorks} />
       <ScarcitySection t={t.scarcity} />
       <FinalCloseSection t={t.finalClose} />
+      <HowItWorksSection t={t.howItWorks} />
+      
+      
       <FinalCtaSection t={t.finalCta} onCtaClick={handleCtaClick} />
 
       <StickyCtaButton text={t.hero.cta} onClick={handleCtaClick} />

@@ -14,6 +14,13 @@ interface HeroSectionProps {
   onCtaClick: () => void;
 }
 
+const handleScrollDown = () => {
+  window.scrollBy({
+    top: window.innerHeight,
+    behavior: 'smooth',
+  });
+};
+
 export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
   return (
     <section className="relative min-h-screen flex items-top bg-gradient-to-br from-gray-50 to-white overflow-hidden">
@@ -26,22 +33,22 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8 text-center lg:text-left">
             <div className="inline-block px-4 py-2 bg-[#55A7AF]/10 rounded-full">
-              <span className="text-[#267C41] font-semibold text-sm tracking-wide">
+              <span className="text-[#267C41] font-semibold text-xl sm:text-2xl lg:text-2x tracking-wide">
                 {t.tagline}
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+            <h1 className="text-4xl sm:text-6xl lg:text-6xl font-bold leading-relaxed lg:leading-tight text-gray-900 whitespace-pre-line">
               {t.headline}
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl">
+            {/* <p className="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl">
               {t.subheadline}
-            </p>
+            </p> */}
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
-                onClick={onCtaClick}
+                onClick={handleScrollDown}
                 className="group px-8 py-4 bg-[#267C41] text-white rounded-lg font-semibold text-lg hover:bg-[#1e6332] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
               >
                 {t.cta}

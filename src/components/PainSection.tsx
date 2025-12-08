@@ -29,26 +29,25 @@ export function PainSection({ t }: PainSectionProps) {
 
           {/* Right: Content shifted to the right */}
           <div className="max-w-xl ml-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-10 text-left">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-10 text-left whitespace-pre-line leading-tight whitespace-pre-line">
               {t.headline}
             </h2>
-
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               {t.bullets.map((bullet, index) => {
-                const Icon = icons[index];
-                return (
-                  <div
-                    key={index}
-                    className="flex items-start gap-4 p-5 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
-                  >
-                    <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-red-600" />
-                    </div>
-                    <p className="text-gray-800 text-base sm:text-lg leading-relaxed pt-1">
-                      {bullet}
-                    </p>
-                  </div>
-                );
+              const Icon = icons[index];
+              return (
+                <div
+                key={index}
+                className="flex items-start gap-4 p-5 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                >
+                <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-red-600" />
+                </div>
+                <p className="text-gray-800 text-base sm:text-lg leading-relaxed pt-1">
+                  {bullet}
+                </p>
+                </div>
+              );
               })}
             </div>
 

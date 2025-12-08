@@ -29,31 +29,34 @@ export function GiftSection({ t }: GiftSectionProps) {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6 h-full flex flex-col justify-between items-stretch">
               <div className="p-6 bg-white rounded-xl shadow-lg border-l-4 border-[#267C41]">
-                <p className="text-gray-800 text-lg leading-relaxed">
-                  {t.description}
-                </p>
+                <p className="text-gray-800 text-lg leading-relaxed text-justify">
+                {t.description}
+              </p>
+              </div>
+              <br/>
+              <br/>
+              <br/>
+              
+              <div className="space-y-4 flex-1">
+              <h3 className="text-2xl font-bold text-gray-900">{t.whatYouGetTitle}</h3>
+              {t.benefits.map((benefit, index) => (
+                <div
+                key={index}
+                className="flex items-start gap-3 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                >
+                <CheckCircle className="w-6 h-6 text-[#267C41] flex-shrink-0 mt-1" />
+                <span className="text-gray-800 text-lg">{benefit}</span>
+                </div>
+              ))}
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-gray-900">{t.whatYouGetTitle}</h3>
-                {t.benefits.map((benefit, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-3 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                  >
-                    <CheckCircle className="w-6 h-6 text-[#267C41] flex-shrink-0 mt-1" />
-                    <span className="text-gray-800 text-lg">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border-l-4 border-amber-500">
-                <p className="text-gray-800 font-semibold text-lg">
-                  {t.exclusiveNote}
-                </p>
-              </div>
+              {/* <div className="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border-l-4 border-amber-500">
+              <p className="text-gray-800 font-semibold text-lg">
+                {t.exclusiveNote}
+              </p>
+              </div> */}
             </div>
 
             <div className="relative">

@@ -4,8 +4,8 @@ interface HowItWorksSectionProps {
   t: {
     headline: string;
     steps: Array<{ title: string; description: string }>;
-    subtitle: string;
-    badges: string[];
+    //subtitle: string;
+    //badges: string[];
   };
 }
 
@@ -19,7 +19,9 @@ export function HowItWorksSection({ t }: HowItWorksSectionProps) {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4">
             {t.headline}
           </h2>
-          <p className="text-xl text-gray-600 text-center mb-16">{t.subtitle}</p>
+          <br/>
+          <br/>
+          {/* <p className="text-xl text-gray-600 text-center mb-16">{t.subtitle}</p> */}
 
           <div className="relative">
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#55A7AF] to-[#267C41] hidden md:block"></div>
@@ -63,7 +65,7 @@ export function HowItWorksSection({ t }: HowItWorksSectionProps) {
             </div>
           </div>
 
-          <div className="mt-16 p-8 bg-gradient-to-r from-gray-50 to-white rounded-2xl border-2 border-[#55A7AF]/30 shadow-lg">
+{/*           <div className="mt-16 p-8 bg-gradient-to-r from-gray-50 to-white rounded-2xl border-2 border-[#55A7AF]/30 shadow-lg">
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
               {t.badges.map((badge, index) => (
                 <>
@@ -75,7 +77,7 @@ export function HowItWorksSection({ t }: HowItWorksSectionProps) {
                 </>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

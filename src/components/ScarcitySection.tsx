@@ -16,17 +16,20 @@ interface ScarcitySectionProps {
 }
 
 export function ScarcitySection({ t }: ScarcitySectionProps) {
-  const [count, setCount] = useState(137);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prev) => {
-        if (prev >= 500) return prev;
-        return Math.min(prev + Math.floor(Math.random() * 2), 500);
-      });
-    }, 30000);
-
-    return () => clearInterval(interval);
+    const startDate = new Date(2025, 11, 8); // December 8, 2025
+    const today = new Date();
+    
+    const daysPassed = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+    
+    let totalCount = 0;
+    for (let i = 0; i < daysPassed; i++) {
+      totalCount += Math.floor(Math.random() * 6) + 2; // Random value 2-7
+    }
+    
+    setCount(Math.min(totalCount, 500));
   }, []);
 
   const percentage = (count / 500) * 100;

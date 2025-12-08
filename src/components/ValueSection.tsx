@@ -6,7 +6,7 @@ import pillarImage3 from '../assets/v3.png';
 interface ValueSectionProps {
   t: {
     headline: string;
-    subtext: string;
+    //subtext: string;
     pillar1: { title: string; description: string };
     pillar2: { title: string; description: string };
     pillar3: { title: string; description: string };
@@ -38,15 +38,15 @@ export function ValueSection({ t }: ValueSectionProps) {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 pb-12">
           {t.headline}
         </h2>
 
-        <div className="max-w-3xl mx-auto mb-16">
+        {/* <div className="max-w-3xl mx-auto mb-16">
           <p className="text-lg text-gray-600 text-center leading-relaxed">
             {t.subtext}
           </p>
-        </div>
+        </div> */}
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
           {pillars.map((pillar, index) => {
