@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/southeas/public_html/lead.southeastlandmark.com
+    - /bin/rsync -av --delete ./ $DEPLOYPATH
