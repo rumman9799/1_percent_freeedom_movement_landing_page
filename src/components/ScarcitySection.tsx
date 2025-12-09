@@ -42,9 +42,9 @@ export function ScarcitySection({ t }: ScarcitySectionProps) {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-red-500 rounded-full mb-6 shadow-lg animate-pulse">
               <AlertCircle className="w-10 h-10 text-white" />
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+            {/* <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
               {t.headline}
-            </h2>
+            </h2> */}
           </div>
 
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden mb-8">
@@ -96,7 +96,7 @@ export function ScarcitySection({ t }: ScarcitySectionProps) {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 text-center">
+{/*           <div className="grid md:grid-cols-3 gap-4 text-center">
             <div className="p-6 bg-white rounded-xl shadow-lg">
               <div className="text-4xl font-bold text-[#267C41] mb-2">50</div>
               <div className="text-gray-600">{t.selectedInMonths}</div>
@@ -109,7 +109,7 @@ export function ScarcitySection({ t }: ScarcitySectionProps) {
               <div className="text-4xl font-bold text-red-500 mb-2">{500 - count}</div>
               <div className="text-gray-600">{t.spotsLeftCard}</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

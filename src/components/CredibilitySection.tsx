@@ -22,7 +22,7 @@ export function CredibilitySection({ t }: CredibilitySectionProps) {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-16">
+{/*           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-16">
             {t.headline}
           </h2>
 
@@ -41,7 +41,7 @@ export function CredibilitySection({ t }: CredibilitySectionProps) {
                 </div>
               );
             })}
-          </div>
+          </div> */}
 
           <div className="bg-gradient-to-br from-gray-50 to-white p-8 sm:p-12 rounded-2xl shadow-xl border border-gray-200">
             <div className="flex flex-col md:flex-row gap-8 items-center">

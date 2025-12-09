@@ -7,7 +7,7 @@ interface FinalCtaSectionProps {
     cta1: string;
     cta2: string;
     subtext: string;
-    benefits: string[];
+    //benefits: string[];
     footer: string;
   };
   onCtaClick: () => void;
@@ -51,7 +51,7 @@ export function FinalCtaSection({ t, onCtaClick }: FinalCtaSectionProps) {
                 </button>
               </div>
 
-              <div className="pt-8 border-t-2 border-gray-200">
+{/*               <div className="pt-8 border-t-2 border-gray-200">
                 <p className="text-gray-800 text-lg font-semibold mb-4 text-center">
                   {t.subtext}
                 </p>
@@ -63,7 +63,7 @@ export function FinalCtaSection({ t, onCtaClick }: FinalCtaSectionProps) {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="bg-gradient-to-r from-amber-500 to-orange-500 p-6 text-center">

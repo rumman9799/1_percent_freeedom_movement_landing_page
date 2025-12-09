@@ -5,6 +5,7 @@ import introVideo from '../assets/vid2.mp4';
 interface PainSectionProps {
   t: {
     headline: string;
+    subheadline: string;
     bullets: string[];
     footer: string;
   };
@@ -29,9 +30,12 @@ export function PainSection({ t }: PainSectionProps) {
 
           {/* Right: Content shifted to the right */}
           <div className="max-w-xl ml-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-10 text-left whitespace-pre-line leading-tight whitespace-pre-line">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-10 text-left leading-tight">
               {t.headline}
             </h2>
+            <p className="text-gray-800 text-lg sm:text-xl leading-relaxed text-left mb-8 font-semibold">
+              {t.subheadline}
+            </p>
             <div className="grid grid-cols-1 gap-6">
               {t.bullets.map((bullet, index) => {
               const Icon = icons[index];

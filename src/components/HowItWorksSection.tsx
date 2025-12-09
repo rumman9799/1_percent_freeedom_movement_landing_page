@@ -3,7 +3,7 @@ import { UserPlus, ClipboardCheck, Award, Key } from 'lucide-react';
 interface HowItWorksSectionProps {
   t: {
     headline: string;
-    steps: Array<{ title: string; description: string }>;
+    steps: Array<{ title: string}>;
     //subtitle: string;
     //badges: string[];
   };
@@ -45,7 +45,7 @@ export function HowItWorksSection({ t }: HowItWorksSectionProps) {
                         }`}
                       >
                         <h3 className="text-2xl font-bold text-gray-900 mb-2">{step.title}</h3>
-                        <p className="text-gray-700 text-lg">{step.description}</p>
+                        {/* <p className="text-gray-700 text-lg">{step.description}</p> */}
                       </div>
                     </div>
 
