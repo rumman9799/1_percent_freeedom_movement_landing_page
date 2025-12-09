@@ -23,8 +23,8 @@ export function GiftSection({ t }: GiftSectionProps) {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#55A7AF] to-[#267C41] rounded-full mb-6 shadow-lg">
               <Gift className="w-10 h-10 text-white" />
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              {t.headline}
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              ওয়েটিং লিস্ট এর প্রতিটি নিবন্ধিত ব্যক্তি পাবেন <p className='text-2xl sm:text-4xl lg:text-5xl font-bold text-green-900 mb-6'>ফ্রি ইনভেস্টমেন্ট হেলথ চেক</p>
             </h2>
           </div>
 
@@ -63,7 +63,7 @@ export function GiftSection({ t }: GiftSectionProps) {
               <SmartVideo
                 src={giftVideo}
                 frameClassName="rounded-2xl overflow-hidden shadow-2xl"
-                autoPlay={true}
+                //autoPlay={true}
                 loop={true}
               />
 

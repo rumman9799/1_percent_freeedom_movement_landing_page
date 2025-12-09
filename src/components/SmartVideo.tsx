@@ -5,7 +5,7 @@ interface SmartVideoProps {
   src: string;
   frameClassName?: string;
   videoClassName?: string;
-  autoPlay?: boolean;
+  //autoPlay?: boolean;
   loop?: boolean;
 }
 
@@ -60,15 +60,13 @@ export function SmartVideo({
   src,
   frameClassName = '',
   videoClassName = '',
-  autoPlay = true,
+  //autoPlay = false,
   loop = true,
 }: SmartVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const userWantsPlayRef = useRef<boolean>(false);
-  const isUserControlledRef = useRef<boolean>(false);
-  const hasAutoPlayedRef = useRef<boolean>(false);
 
   const playVideo = async (isAutoPlay = false) => {
     const video = videoRef.current;
@@ -77,14 +75,14 @@ export function SmartVideo({
       video.muted = false;
       video.volume = 1;
       
-      // If auto-playing (scroll-based), pause other videos first
-      if (isAutoPlay && !isUserControlledRef.current) {
-        videoManager.pauseAllExcept(video);
-      }
+      // Pause other videos when this one plays
+      videoManager.pauseAllExcept(video);
       
       await video.play();
       setIsPlaying(true);
-      userWantsPlayRef.current = true;
+      if (!isAutoPlay) {
+        userWantsPlayRef.current = true;
+      }
     } catch (error) {
       // Autoplay with sound can be blocked; fall back to paused state
       setIsPlaying(false);
@@ -100,7 +98,6 @@ export function SmartVideo({
   };
 
   const togglePlayback = () => {
-    isUserControlledRef.current = true;
     if (isPlaying) {
       userWantsPlayRef.current = false;
       pauseVideo();
@@ -116,7 +113,7 @@ export function SmartVideo({
     
     // Create a stable play function that can be called externally
     const playFunction = async () => {
-      if (video && video.paused && !isUserControlledRef.current) {
+      if (video && video.paused && userWantsPlayRef.current) {
         await playVideo(true);
       }
     };
@@ -127,7 +124,7 @@ export function SmartVideo({
     };
   }, []);
 
-  // Setup video properties and attempt initial auto-play
+  // Setup video properties and ensure paused on load
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -135,12 +132,11 @@ export function SmartVideo({
     video.muted = false;
     video.volume = 1;
     video.loop = loop;
-    
-    // Mark that we've set up the video
-    hasAutoPlayedRef.current = true;
+    video.pause(); // Ensure video is paused on initial load
+    setIsPlaying(false);
   }, [loop]);
 
-  // Scroll-based play/pause with IntersectionObserver
+  // Scroll-based play/pause with IntersectionObserver - only if user wants playback
   useEffect(() => {
     const video = videoRef.current;
     const container = containerRef.current;
@@ -148,13 +144,13 @@ export function SmartVideo({
 
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        // Only auto-control if user hasn't manually interacted
-        if (isUserControlledRef.current) return;
+        // Only control playback if user has manually started the video
+        if (!userWantsPlayRef.current) return;
         
         if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
-          // Video is in view - play it (and pause others)
-          if (video.paused) {
-            playVideo(true); // Pass true to indicate auto-play
+          // Video is in view - play it if user wants it playing
+          if (video.paused && userWantsPlayRef.current) {
+            playVideo(true);
           }
         } else if (!entry.isIntersecting || entry.intersectionRatio < 0.3) {
           // Video is out of view - pause it
@@ -175,71 +171,12 @@ export function SmartVideo({
 
     observer.observe(container);
     
-    // Manually trigger intersection check immediately for videos already in view
-    // This ensures the first video plays on page load
-    const triggerInitialCheck = () => {
-      const rect = container.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      const isInView = rect.top < viewportHeight && rect.bottom > 0;
-      
-      if (isInView) {
-        const visibleTop = Math.max(0, rect.top);
-        const visibleBottom = Math.min(viewportHeight, rect.bottom);
-        const visibleHeight = visibleBottom - visibleTop;
-        const intersectionRatio = visibleHeight / rect.height;
-        
-        // Create a synthetic entry to trigger the handler
-        const entry: IntersectionObserverEntry = {
-          target: container,
-          isIntersecting: intersectionRatio > 0.4,
-          intersectionRatio: intersectionRatio,
-          boundingClientRect: rect,
-          rootBounds: new DOMRect(0, 0, window.innerWidth, viewportHeight),
-          intersectionRect: new DOMRect(
-            rect.left,
-            visibleTop,
-            rect.width,
-            visibleHeight
-          ),
-          time: Date.now()
-        };
-        
-        handleIntersection([entry]);
-      }
-    };
-    
-    // Try multiple times to catch the video when it's ready
-    const timers = [
-      setTimeout(triggerInitialCheck, 100),
-      setTimeout(triggerInitialCheck, 300),
-      setTimeout(triggerInitialCheck, 600),
-      setTimeout(triggerInitialCheck, 1000)
-    ];
-    
-    // Also trigger when video is ready
-    const onCanPlay = () => {
-      triggerInitialCheck();
-    };
-    video.addEventListener('canplay', onCanPlay);
-    video.addEventListener('loadeddata', onCanPlay);
-    
     return () => {
       observer.disconnect();
-      timers.forEach(timer => clearTimeout(timer));
-      video.removeEventListener('canplay', onCanPlay);
-      video.removeEventListener('loadeddata', onCanPlay);
     };
   }, []);
 
-  // Reset user control flag after a delay when user interacts
-  useEffect(() => {
-    if (isUserControlledRef.current) {
-      const timer = setTimeout(() => {
-        isUserControlledRef.current = false;
-      }, 3000); // Reset after 3 seconds of no user interaction
-      return () => clearTimeout(timer);
-    }
-  }, [isPlaying]);
+
 
   return (
     <div ref={containerRef} className={`relative ${frameClassName}`}>
@@ -275,4 +212,3 @@ export function SmartVideo({
 export function triggerFirstVideo() {
   videoManager.triggerFirstVideoInView();
 }
-

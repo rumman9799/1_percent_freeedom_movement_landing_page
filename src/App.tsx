@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white relative">
       {/* Welcome Modal */}
-      <WelcomeModal
+      {/* <WelcomeModal
         isOpen={showWelcomeModal}
         onClose={() => {
           setShowWelcomeModal(false);
@@ -53,7 +53,7 @@ function App() {
             triggerFirstVideo();
           }, 300); // Small delay to ensure modal is fully closed
         }}
-      />
+      /> */}
 
       {/* Top bar with logo and language toggle, aligned to page padding and scrolling with content */}
       <header className="w-full">
@@ -64,13 +64,13 @@ function App() {
             className="h-24 sm:h-28 w-auto cursor-pointer"
             onClick={() => navigateTo('https://www.southeastlandmark.com/')}
           />
-          <LanguageToggle
+{/*           <LanguageToggle
             label={t.language.toggle}
             onToggle={() =>
               setLanguage(language === 'bn' ? 'en' : 'bn')
             }
             currentLanguage={language}
-          />
+          /> */}
         </div>
       </header>
 
@@ -81,13 +81,14 @@ function App() {
       <CredibilitySection t={t.credibility} />
       <GiftSection t={t.gift} />
       <ScarcitySection t={t.scarcity} />
-      <FinalCloseSection t={t.finalClose} />
-      <HowItWorksSection t={t.howItWorks} />
+      
+      {/* <HowItWorksSection t={t.howItWorks} /> */}
       
       
       <FinalCtaSection t={t.finalCta} onCtaClick={handleCtaClick} />
+      {/* <FinalCloseSection t={t.finalClose} /> */}
 
-      <StickyCtaButton text={t.hero.cta} onClick={handleCtaClick} />
+      {/* <StickyCtaButton text={t.hero.cta} onClick={handleCtaClick} /> */}
     </div>
   );
 }

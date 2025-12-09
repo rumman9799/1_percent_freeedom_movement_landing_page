@@ -19,7 +19,7 @@ export function FinalCloseSection({ t }: FinalCloseSectionProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-6">
-            <div className="relative bg-gradient-to-br from-blue-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105 border border-blue-500/30 hover:border-blue-400/60 group overflow-hidden">
+{/*             <div className="relative bg-gradient-to-br from-blue-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105 border border-blue-500/30 hover:border-blue-400/60 group overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
 
@@ -33,9 +33,9 @@ export function FinalCloseSection({ t }: FinalCloseSectionProps) {
                   {t.line1}
                 </p>
               </div>
-            </div>
+            </div> */}
 
-            <div className="relative bg-gradient-to-br from-emerald-900/40 via-teal-900/40 to-cyan-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:shadow-emerald-500/30 transition-all duration-500 hover:scale-105 border border-emerald-500/30 hover:border-emerald-400/60 group overflow-hidden">
+{/*             <div className="relative bg-gradient-to-br from-emerald-900/40 via-teal-900/40 to-cyan-900/40 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:shadow-emerald-500/30 transition-all duration-500 hover:scale-105 border border-emerald-500/30 hover:border-emerald-400/60 group overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-emerald-500/10 to-teal-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl group-hover:bg-emerald-500/20 transition-all duration-500"></div>
 
@@ -49,7 +49,7 @@ export function FinalCloseSection({ t }: FinalCloseSectionProps) {
                   {t.line2}
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <div className="relative bg-gradient-to-br from-red-900/50 via-rose-900/50 to-pink-900/50 backdrop-blur-sm p-8 rounded-2xl shadow-2xl shadow-red-500/40 transition-all duration-500 hover:scale-105 border-2 border-red-500/50 hover:border-red-400/80 group overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 via-rose-500/30 to-pink-500/20 animate-pulse"></div>

@@ -6,6 +6,8 @@ interface HeroSectionProps {
   t: {
     tagline: string;
     headline: string;
+    headline2: string;
+    headline3: string;
     subheadline: string;
     cta: string;
     ctaAlt: string;
@@ -38,9 +40,19 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight lg:leading-tight text-gray-900 whitespace-pre-line">
+            <h1 className="text-2xl sm:text-5xl lg:text-5xl font-black leading-tight lg:leading-tight text-gray-900 whitespace-pre-line">
               <span className="bg-gradient-to-r from-gray-900 via-[#267C41] to-gray-900 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
                 {t.headline}
+              </span>
+            </h1>
+            <h1 className="text-2xl sm:text-5xl lg:text-5xl font-black leading-tight lg:leading-tight text-gray-900 whitespace-pre-line">
+              <span className="bg-gradient-to-r from-gray-900 via-[#267C41] to-gray-900 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                {t.headline2}
+              </span>
+            </h1>
+            <h1 className="text-2xl sm:text-5xl lg:text-5xl font-black leading-tight lg:leading-tight text-gray-900 whitespace-pre-line">
+              <span className="bg-gradient-to-r from-gray-900 via-[#267C41] to-gray-900 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                {t.headline3}
               </span>
             </h1>
 

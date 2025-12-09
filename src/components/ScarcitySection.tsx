@@ -29,10 +29,10 @@ export function ScarcitySection({ t }: ScarcitySectionProps) {
       totalCount += Math.floor(Math.random() * 6) + 2; // Random value 2-7
     }
     
-    setCount(Math.min(totalCount, 500));
+    setCount(Math.min(totalCount, 100));
   }, []);
 
-  const percentage = (count / 500) * 100;
+  const percentage = (count / 100) * 100;
 
   return (
     <section className="py-20 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
@@ -67,7 +67,7 @@ export function ScarcitySection({ t }: ScarcitySectionProps) {
                 <div className="flex items-center justify-between text-sm font-semibold text-gray-700">
                   <span>{t.counter}:</span>
                   <span className="text-2xl text-[#267C41]">
-                    {count} / 500
+                    {count} / 100
                   </span>
                 </div>
 
@@ -84,7 +84,7 @@ export function ScarcitySection({ t }: ScarcitySectionProps) {
                 </div>
 
                 <p className="text-center text-gray-600 text-sm">
-                  {500 - count} {t.spotsRemainingSuffix}
+                  {100 - count} {t.spotsRemainingSuffix}
                 </p>
               </div>
             </div>
