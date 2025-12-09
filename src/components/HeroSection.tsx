@@ -32,14 +32,16 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8 text-center lg:text-left">
-            <div className="inline-block px-4 py-2 bg-[#55A7AF]/10 rounded-full">
-              <span className="text-[#267C41] font-semibold text-xl sm:text-2xl lg:text-2x tracking-wide">
+            <div className="inline-block px-6 py-2.5 bg-gradient-to-r from-[#55A7AF]/20 to-[#267C41]/20 rounded-full border border-[#55A7AF]/30 backdrop-blur-sm">
+              <span className="text-[#267C41] font-bold text-sm sm:text-base lg:text-lg tracking-widest uppercase">
                 {t.tagline}
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-5xl font-bold leading-relaxed lg:leading-tight text-gray-900 whitespace-pre-line">
-              {t.headline}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight lg:leading-tight text-gray-900 whitespace-pre-line">
+              <span className="bg-gradient-to-r from-gray-900 via-[#267C41] to-gray-900 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                {t.headline}
+              </span>
             </h1>
 
             {/* <p className="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl">
@@ -49,7 +51,7 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 onClick={handleScrollDown}
-                className="group px-8 py-4 bg-[#267C41] text-white rounded-lg font-semibold text-lg hover:bg-[#1e6332] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                className="group px-8 py-4 bg-gradient-to-r from-[#267C41] to-[#55A7AF] text-white rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-[#267C41]/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
               >
                 {t.cta}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -74,6 +76,16 @@ export function HeroSection({ t, onCtaClick }: HeroSectionProps) {
           <div className="w-1 h-3 bg-gray-400 rounded-full"></div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes gradient {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        .animate-gradient {
+          animation: gradient 5s ease infinite;
+        }
+      `}</style>
     </section>
   );
 }

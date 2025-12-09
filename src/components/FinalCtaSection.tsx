@@ -26,9 +26,9 @@ export function FinalCtaSection({ t, onCtaClick }: FinalCtaSectionProps) {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
               {t.headline}
             </h2>
-            <p className="text-xl sm:text-2xl opacity-90">
+            {/* <p className="text-xl sm:text-2xl opacity-90">
               {t.headlineSub}
-            </p>
+            </p> */}
           </div>
 
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
@@ -42,13 +42,13 @@ export function FinalCtaSection({ t, onCtaClick }: FinalCtaSectionProps) {
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                 </button>
 
-                <button
+               {/*  <button
                   onClick={onCtaClick}
                   className="group w-full px-8 py-6 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl font-bold text-xl sm:text-2xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3"
                 >
                   {t.cta2}
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                </button>
+                </button> */}
               </div>
 
 {/*               <div className="pt-8 border-t-2 border-gray-200">

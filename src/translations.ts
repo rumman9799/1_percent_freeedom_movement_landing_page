@@ -2,7 +2,7 @@ export const translations = {
   bn: {
     hero: {
       tagline: "১% ল্যান্ড ফ্রিডম মুভমেন্ট",
-      headline: "১% দিলেই ১০০% জমি — ভাড়ার শৃঙ্খল আজ ভাঙবে তুমি।\nআর্থিক শক্তি গড়বে ভূমি।",
+      headline: "১% দিলেই ১০০% জমি — ভাড়ার শৃঙ্খল আজ ভাঙবে তুমি।\n\nআর্থিক শক্তি গড়বে ভূমি।\n",
       subheadline: "১% ভূমি স্বাধীনতা আন্দোলন আজীবন ভাড়াটেদের সাহায্য করার জন্য বিদ্যমান যাতে তারা বিশাল অগ্রিম পেমেন্ট ছাড়াই, ব্যাংক ঋণ ছাড়াই এবং দশকের অপেক্ষা ছাড়াই জমির মালিকানায় প্রবেश করতে পারে।",
       cta: "বিস্তারিত জানুন",
       ctaAlt: "জমির মালিকানার জন্য আমার নাম নিবন্ধন করুন",
@@ -149,7 +149,8 @@ export const translations = {
       imageQuestion: "How much of your life has already been lost to rent?"
     },
     pain: {
-      headline: "The truth you never say out loud —\n\n Rent doesn’t just take money, it takes away your future.",
+      headline: "The truth you never say out loud —\n",
+      subheadline: "Rent doesn’t just take money, it takes away your future.\n",
       bullets: [
         "If you pay 24,000 taka rent monthly → in 12 years = 34,56,000 taka",
         "Yet nothing is in your name",
